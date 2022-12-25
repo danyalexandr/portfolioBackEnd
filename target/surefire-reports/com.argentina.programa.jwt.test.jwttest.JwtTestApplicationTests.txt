@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.argentina.programa.jwt.test.jwttest.JwtTestApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.172 s - in com.argentina.programa.jwt.test.jwttest.JwtTestApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.582 s - in com.argentina.programa.jwt.test.jwttest.JwtTestApplicationTests

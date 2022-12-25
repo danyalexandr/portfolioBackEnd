@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("explaboral")
-@CrossOrigin(origins = "https://portfoliofrontend-danyalexandr.web.app/")
+@CrossOrigin(origins = "https://portfoliofrontend-danyalexandr.firebaseapp.com/")
 public class ExperienciaController {
     
     @Autowired 

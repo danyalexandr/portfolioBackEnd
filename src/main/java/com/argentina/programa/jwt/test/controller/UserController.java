@@ -20,7 +20,7 @@ import com.argentina.programa.jwt.test.security.JwtTokenUtil;
 import com.argentina.programa.jwt.test.service.JwtUserDetailsService;
 
 @RestController
-@CrossOrigin(origins = "https://portfoliofrontend-danyalexandr.web.app")
+@CrossOrigin(origins = "https://portfoliofrontend-danyalexandr.firebaseapp.com")
 public class UserController {
 
 	@Autowired
