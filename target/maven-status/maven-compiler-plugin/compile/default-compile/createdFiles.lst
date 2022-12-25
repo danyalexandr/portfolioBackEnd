@@ -14,6 +14,7 @@ com/argentina/programa/jwt/test/repository/PersonaRepository.class
 com/argentina/programa/jwt/test/dto/UserDTO.class
 com/argentina/programa/jwt/test/configuration/JwtTestConfiguration.class
 com/argentina/programa/jwt/test/controller/ExperienciaController.class
+com/argentina/programa/jwt/test/WebConfig.class
 com/argentina/programa/jwt/test/JwtTestApplicationBeanInfo.class
 com/argentina/programa/jwt/test/security/JwtAuthenticationEntryPoint.class
 com/argentina/programa/jwt/test/model/Experiencia.class

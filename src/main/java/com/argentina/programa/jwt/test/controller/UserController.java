@@ -20,7 +20,7 @@ import com.argentina.programa.jwt.test.security.JwtTokenUtil;
 import com.argentina.programa.jwt.test.service.JwtUserDetailsService;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "https://portfoliofrontend-danyalexandr.web.app")
 public class UserController {
 
 	@Autowired

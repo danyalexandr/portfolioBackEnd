@@ -4,6 +4,7 @@
 /cursos/portfolioBackEnd/ap-jwt-test-main/src/main/java/com/argentina/programa/jwt/test/repository/ProyectosRepository.java
 /cursos/portfolioBackEnd/ap-jwt-test-main/src/main/java/com/argentina/programa/jwt/test/security/JwtTokenUtil.java
 /cursos/portfolioBackEnd/ap-jwt-test-main/src/main/java/com/argentina/programa/jwt/test/controller/EducacionController.java
+/cursos/portfolioBackEnd/ap-jwt-test-main/src/main/java/com/argentina/programa/jwt/test/WebConfig.java
 /cursos/portfolioBackEnd/ap-jwt-test-main/src/main/java/com/argentina/programa/jwt/test/exception/UserAlreadyExistAuthenticationException.java
 /cursos/portfolioBackEnd/ap-jwt-test-main/src/main/java/com/argentina/programa/jwt/test/security/JwtAuthenticationEntryPoint.java
 /cursos/portfolioBackEnd/ap-jwt-test-main/src/main/java/com/argentina/programa/jwt/test/controller/ExperienciaController.java
