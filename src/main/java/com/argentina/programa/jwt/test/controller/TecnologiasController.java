@@ -19,20 +19,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("tecno")
+@RequestMapping("tech")
 @CrossOrigin(origins = "https://portfoliofrontend-danyalexandr.firebaseapp.com/")
 public class TecnologiasController {
     
     @Autowired TecnologiaService tecnologiaservice;
     
-    @GetMapping("/listatecno")
+    @GetMapping("/lista")
     public ResponseEntity<List<Tecnologias>> List(){
         
         List<Tecnologias> list = tecnologiaservice.List();
         return new ResponseEntity(list, HttpStatus.OK);
     }
     
-    @GetMapping("/detailtecno/{id}")
+    @GetMapping("/detail/{id}")
     public ResponseEntity<Tecnologias> getById(@PathVariable("id") int id){
         if(!tecnologiaservice.existsById(id))
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
@@ -40,7 +40,7 @@ public class TecnologiasController {
         return new ResponseEntity(tecnologias, HttpStatus.OK);
     }
     
-    @PostMapping("/creartecno")
+    @PostMapping("/crear")
     public ResponseEntity<?> create(@RequestBody TecnologiasDTO dtotecno){
         if(StringUtils.isBlank(dtotecno.getHabilidad())){
             return new ResponseEntity(new Mensaje("obligatorio"),HttpStatus.BAD_REQUEST);
@@ -53,7 +53,7 @@ public class TecnologiasController {
         return new ResponseEntity(new Mensaje("agregado"),HttpStatus.OK);
     }
     
-    @PutMapping("/updatetecno/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody TecnologiasDTO dtotecno){
         
         if(!tecnologiaservice.existsById(id))
@@ -73,7 +73,7 @@ public class TecnologiasController {
         return new ResponseEntity(new Mensaje("actualizado"), HttpStatus.OK);
         }
     
-    @DeleteMapping("/borrartecno/{id}")
+    @DeleteMapping("/borrar/{id}")
         public ResponseEntity<?> delete(@PathVariable("id") int id){
             
            if(!tecnologiaservice.existsById(id))

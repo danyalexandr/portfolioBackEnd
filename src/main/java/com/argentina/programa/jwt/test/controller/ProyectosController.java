@@ -19,20 +19,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("proyecto")
+@RequestMapping("proyect")
 @CrossOrigin(origins = "https://portfoliofrontend-danyalexandr.firebaseapp.com/")
 public class ProyectosController {
     
     @Autowired ProyectoService proyectoservice;
     
-    @GetMapping("/listapro")
+    @GetMapping("/lista")
     public ResponseEntity<List<Proyectos>> List(){
         
         List<Proyectos> list = proyectoservice.List();
         return new ResponseEntity(list, HttpStatus.OK);
     }
     
-    @GetMapping("/detailpro/{id}")
+    @GetMapping("/detail/{id}")
     public ResponseEntity<Proyectos> getById(@PathVariable("id") int id){
         if(!proyectoservice.existsById(id))
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
@@ -40,7 +40,7 @@ public class ProyectosController {
         return new ResponseEntity(proyectos, HttpStatus.OK);
     }
     
-    @PostMapping("/crearpro")
+    @PostMapping("/crear")
     public ResponseEntity<?> create(@RequestBody ProyectosDTO dtopro){
         if(StringUtils.isBlank(dtopro.getNombre())){
             return new ResponseEntity(new Mensaje("obligatorio"),HttpStatus.BAD_REQUEST);
@@ -53,7 +53,7 @@ public class ProyectosController {
         return new ResponseEntity(new Mensaje("agregado"),HttpStatus.OK);
     }
     
-    @PutMapping("/updatepro/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody ProyectosDTO dtopro){
         
         if(!proyectoservice.existsById(id))
@@ -73,7 +73,7 @@ public class ProyectosController {
         return new ResponseEntity(new Mensaje("actualizado"), HttpStatus.OK);
         }
     
-    @DeleteMapping("/borrarpro/{id}")
+    @DeleteMapping("/borrar/{id}")
         public ResponseEntity<?> delete(@PathVariable("id") int id){
             
            if(!proyectoservice.existsById(id))
